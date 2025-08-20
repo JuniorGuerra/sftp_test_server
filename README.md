@@ -66,7 +66,7 @@ func main() {
 
 ```
 .
-├── sftp_test_server.go    # Main server implementation
+├── sftp.go    # Main server implementation
 ├── sftp_test.go           # Comprehensive test examples
 ├── examples/              # Usage examples
 │   ├── create_file/       # File upload example
