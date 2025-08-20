@@ -59,11 +59,10 @@ func main() {
 		return
 	}
 
-	createFile(sftpClient)
-
 	defer sftpClient.Close()
 
 	// Now you can perform SFTP operations using the sftpClient
+	createFile(sftpClient)
 }
 
 func createFile(client *sftp.Client) {
