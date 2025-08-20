@@ -329,20 +329,3 @@ func generatePrivateKey() (ssh.Signer, error) {
 	privatePEM := pem.EncodeToMemory(privateKeyPEM)
 	return ssh.ParsePrivateKey(privatePEM)
 }
-
-// Example usage for testing
-func ExampleUsage() {
-	// Create and start the SFTP server
-	server, err := NewSFTPServerLocal("testuser", "testpass", 2222, "./test_sftp_root")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	if err := server.Start(); err != nil {
-		log.Fatal(err)
-	}
-	defer server.Stop()
-
-	// Now you can connect to localhost:2222 with username "testuser" and password "testpass"
-	// Files will be stored in "./test_sftp_root" directory
-}
